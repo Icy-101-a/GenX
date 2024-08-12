@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assets/icon.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section class="image-generator">
+        <video class="bg-video" autoplay loop muted>
+            <source src="/assets/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>GenX</h1>
+            <h1>AI Image Generation Tool</h1>
+            <p>Convert your text into an image within a second using this tool</p>
+            <form action="#" class="generate-form">
+                <input type="text" class="prompt-input" placeholder="Describe" required/>
+                <div class="controls">
+                    <select class="img-quantity">
+                        <option value="1">1 Image</option>
+                        <option value="2">2 Images</option>
+                        <option value="3">3 Images</option>
+                        <option value="4">4 Images</option>
+                    </select>
+                    <button type="submit" class="generate-btn">Generate</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="images">
+        <section class="image-gallery">
+            <div class="img-card">
+                <img src="assets/img-1.jpg" alt="image">
+            </div>
+            <div class="img-card">
+                <img src="assets/img-2.jpg" alt="image">
+            </div>
+            <div class="img-card">
+                <img src="assets/img-3.jpg" alt="image">
+            </div>
+            <div class="img-card">
+                <img src="assets/img-4.jpg" alt="image">
+            </div>
+        </section>
+    </div>
+    <div class="tag">
+        <h3>You can generate and download amazing images like these</h3>
+    </div>
+    <footer>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">ADITYA</span></p>
+        </div>
+    </footer>
+</body>
+</html>

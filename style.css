@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: rgb(38, 35, 100);
+    background: linear-gradient(180deg, rgb(79, 2, 74) 0%, rgb(11, 0, 11) 46%, rgb(79, 2, 74) 100%);
+
+}
+
+
+.image-generator {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-generator .bg-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.image-generator::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #160224;
+}
+
+.image-generator .content {
+    color: #ffffff;
+    text-shadow: 0 0 5px #e11f1f, /* White glow effect */
+                 0 0 5px #ffffff,
+                 0 0 10px #ee00ff, /* Purple glow effect */
+                 0 0 10px #ff00a6;
+    padding: 0 15px;
+    max-width: 760px;
+    text-align: center;
+    position: relative;
+}
+
+.image-generator h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.image-generator p {
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    position: relative;
+
+}
+
+.tag h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 200;
+}
+
+.image-generator .generate-form {
+    height: 56px;
+    width: 100%;
+    padding: 6px;
+    margin: 45px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.image-generator .prompt-input {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 17px;
+}
+
+.generate-form .controls {
+    display: flex;
+    height: 100%;
+    gap: 15px;
+}
+
+.generate-form .img-quantity {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.generate-form .generate-btn {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #70043e;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 15px;
+    margin: 50px auto;
+    max-width: 1250px;
+}
+
+.image-gallery .img-card {
+    width: 285px;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: #f2f2f2;
+}
+
+.image-gallery .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-gallery .img-card.loading img {
+    width: 80px;
+    height: 80px;
+}
+
+.image-gallery .img-card .download-btn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: #fff;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-gallery .img-card:not(.loading):hover .download-btn {
+    display: flex;
+}
+
+.image-gallery .img-card .download-btn img {
+    width: 14px;
+    height: 14px;
+}
+
+
+.footerBottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(97, 40, 131, 0.237);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    padding: 1rem;
+}
+.footerBottom p{
+    font-size: 0.6rem;
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media screen and (max-width: 760px) {
+    .image-generator h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-generator p {
+        font-size: 1rem;
+    }
+
+    .image-generator .generate-form {
+        margin-top: 30px;
+        height: 52px;
+        display: block;
+    }
+
+    .generate-form .controls {
+        height: 40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .generate-form .img-quantity {
+        color: #fff;
+    }
+
+    .generate-form .img-quantity option {
+        color: #000;
+    }
+
+    .generate-form .generate-btn {
+        height: 100%;
+    }
+
+    .image-gallery .img-card:not(.loading):hover .download-btn {
+        display: flex;
+    }
+
+    .image-gallery {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .image-gallery .img-card {
+        width: 100%;
+    }
+
+    .tag h3 {
+        font-size: 0.7rem;    }
+}
