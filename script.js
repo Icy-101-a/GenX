@@ -1,8 +1,8 @@
 const generateForm = document.querySelector(".generate-form");
 const imageGallery = document.querySelector(".image-gallery");
 
-const API_KEY = "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";
-const API_URL = "https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image"
+const API_KEY = "Your_API_KEY";
+const API_URL = "Your_API_URL"
 
 let isImageGenerating = false;
 
